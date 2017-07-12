@@ -10,7 +10,6 @@ primes = [2,3,5,7,11,13]
 i = 14
 until primes.length == 10001
   primes << i if  is_prime?(i)
-  puts primes.length
   i += 1
 end
 
