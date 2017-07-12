@@ -7,7 +7,7 @@ fib n = fib(n-1) + fib(n-2)
 newlimit = map fib [1..]
 
 -- Filter for evens only
-evens_only list = [ x | x <- list , even x]
+evens_only list = filter even list
 
 -- Limit list to values under 4000000
 
