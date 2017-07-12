@@ -5,7 +5,7 @@ This repository holds my solutions to Project Euler prolems in Ruby, Python, and
 
 1. Multiples of 3 and 5 - 7/11/17 
 2. Even Fibonacci numbers - 7/11/17
-3. Largest prime factor
+3. Largest prime factor - 7/11/17
 4. Largest palindrome product
 5. Smallest multiple
 6. Sum square difference
