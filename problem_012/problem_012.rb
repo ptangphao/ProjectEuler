@@ -1,19 +1,28 @@
 def factors(num)
-  return (1..num).select{|n| num % n == 0}
+  answer = (1..(Math.sqrt(num).to_i + 1)).select{|n| num % n == 0}
+  complete_answer = []
+  answer.each do |ans|
+    other = num/ans 
+    complete_answer += [ans, other]
+  end
+  return complete_answer.uniq.count
 end
+
 
 def triangle(num)
   (1..num).reduce(:+)
 end
 
-i = 2
-answer = ""
 a = Time.now
-triangles = [1]
-while answer == ""
-  triangles << (triangles.last + i)
-  answer = triangles.last if factors(triangles.last).length > 500
-  puts "current triangle: #{triangles[-1]}"
+
+final = ""
+i = 2
+while final == ""
+  current_num = triangle(i)
+  if factors(current_num) > 500
+    final = current_num
+  end
   i += 1
 end
-puts "The answer is #{answer} and took #{Time.now - a} seconds"
+
+p final
